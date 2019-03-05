@@ -1,0 +1,84 @@
+?            0     1     0 /sbin/init splash
+?            0   261     1 /lib/systemd/systemd-journald
+?            0   286     1 /lib/systemd/systemd-udevd
+?          101   835     1 /lib/systemd/systemd-resolved
+?            0   838     1 /usr/sbin/acpid
+?            0   839     1 /usr/lib/accountsservice/accounts-daemon
+?            0   844     1 /usr/sbin/cron -f
+?            0   846     1 /lib/systemd/systemd-logind
+?            0   868     1 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+?          115   869     1 avahi-daemon: running [sreenath.local]
+?            0   870     1 /usr/lib/bluetooth/bluetoothd
+?            0   871     1 /usr/sbin/thermald --no-daemon --dbus-enable
+?          103   872     1 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+?          115   877   869 avahi-daemon: chroot helper
+?            0   880     1 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+?            0   883     1 /usr/lib/udisks2/udisksd
+?            0   884     1 /usr/sbin/irqbalance --foreground
+?            0   886     1 /usr/sbin/ModemManager
+?          102   888     1 /usr/sbin/rsyslogd -n
+?            0   890     1 /usr/sbin/NetworkManager --no-daemon
+?            0   891     1 /usr/lib/snapd/snapd
+?            0   905     1 /usr/lib/policykit-1/polkitd --no-debug
+?            0   989     1 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+?            0  1006     1 /usr/sbin/sshd -D
+?            0  1017     1 /usr/sbin/gdm3
+?            0  1024  1017 gdm-session-worker [pam/gdm-launch-environment]
+?            0  1065     1 /usr/sbin/apache2 -k start
+?          121  1071     1 /usr/sbin/mysqld --daemonize --pid-file=/run/mysqld/mysqld.pid
+?          120  1096     1 /lib/systemd/systemd --user
+?          120  1098  1096 (sd-pam)
+?          120  1131  1096 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+?            0  1207     1 /usr/lib/upower/upowerd
+?          120  1236  1096 /usr/lib/at-spi2-core/at-spi-bus-launcher
+?          120  1241  1236 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+?          120  1243  1096 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+?          120  1248  1096 /usr/bin/pulseaudio --daemonize=no
+?          109  1249     1 /usr/lib/rtkit/rtkit-daemon
+?          111  1253     1 /usr/bin/whoopsie -f
+?          112  1257     1 /usr/sbin/kerneloops --test
+?          112  1259     1 /usr/sbin/kerneloops
+?            0  1271     1 /opt/teamviewer/tv_bin/teamviewerd -d
+?          120  1307  1096 /usr/lib/ibus/ibus-portal
+?            0  1327     1 /usr/lib/x86_64-linux-gnu/boltd
+?            0  1339     1 /usr/lib/packagekit/packagekitd
+?          116  1426     1 /usr/lib/colord/colord
+?            0  1458  1017 gdm-session-worker [pam/gdm-password]
+?         1000  1461     1 /lib/systemd/systemd --user
+?         1000  1462  1461 (sd-pam)
+?         1000  1475     1 /usr/bin/gnome-keyring-daemon --daemonize --login
+?         1000  1513  1461 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+?         1000  1611  1516 /usr/bin/ssh-agent /usr/bin/im-launch env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+?         1000  1614  1461 /usr/lib/at-spi2-core/at-spi-bus-launcher
+?         1000  1619  1614 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+?         1000  1621  1461 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+?         1000  1647  1461 /usr/lib/gvfs/gvfsd
+?         1000  1652  1461 /usr/lib/gvfs/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+?         1000  1656     1 /usr/bin/pulseaudio --start --log-target=syslog
+?         1000  1688  1461 /usr/lib/ibus/ibus-portal
+?         1000  1699  1461 /usr/lib/gnome-shell/gnome-shell-calendar-server
+?         1000  1708  1461 /usr/lib/dconf/dconf-service
+?         1000  1711  1461 /usr/lib/gvfs/gvfs-udisks2-volume-monitor
+?         1000  1715  1461 /usr/lib/gvfs/gvfs-afc-volume-monitor
+?         1000  1720  1461 /usr/lib/gvfs/gvfs-mtp-volume-monitor
+?         1000  1724  1461 /usr/lib/gvfs/gvfs-goa-volume-monitor
+?         1000  1728  1461 /usr/lib/gnome-online-accounts/goa-daemon
+?         1000  1732  1461 /usr/lib/evolution/evolution-source-registry
+?         1000  1745  1461 /usr/lib/gnome-online-accounts/goa-identity-service
+?         1000  1751  1461 /usr/lib/gvfs/gvfs-gphoto2-volume-monitor
+?         1000  1848  1461 /usr/lib/evolution/evolution-calendar-factory
+?         1000  1904  1848 /usr/lib/evolution/evolution-calendar-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.Calendarx1848x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/Calendar/1848/2
+?         1000  1926  1647 /usr/lib/gvfs/gvfsd-trash --spawner :1.22 /org/gtk/gvfs/exec_spaw/0
+?         1000  2027  1461 /usr/lib/gvfs/gvfsd-metadata
+?            0  2098     1 /usr/lib/fwupd/fwupd
+?         1000 12097  1647 /usr/lib/gvfs/gvfsd-network --spawner :1.22 /org/gtk/gvfs/exec_spaw/1
+?         1000 12136  1647 /usr/lib/gvfs/gvfsd-dnssd --spawner :1.22 /org/gtk/gvfs/exec_spaw/7
+?         1000 14058  1475 /usr/bin/ssh-agent -D -a /run/user/1000/keyring/.ssh
+?         1000 17421  1647 /usr/lib/gvfs/gvfsd-http --spawner :1.22 /org/gtk/gvfs/exec_spaw/8
+?           33 18849  1065 /usr/sbin/apache2 -k start
+?           33 18850  1065 /usr/sbin/apache2 -k start
+?           33 18851  1065 /usr/sbin/apache2 -k start
+?           33 18852  1065 /usr/sbin/apache2 -k start
+?           33 18853  1065 /usr/sbin/apache2 -k start
+?            0 18865     1 /usr/sbin/cupsd -l
+?            0 18866     1 /usr/sbin/cups-browsed
