@@ -19,3 +19,13 @@ Now run the compiled file sudo ./a.out on pressing left and right clicks, the br
 Removing our driver sudo rmmod usbmouse
 
 Loading default usb driver back sudo modprobe usbhid
+
+
+
+sudo mknod /dev/myDev c 91 1
+MAKE 
+sudo rmmod usbhid 
+sudo insmod usbmouse.ko
+run the adju.c file 
+sudo rmmod usbmouse
+sudo modprobe usbhid
